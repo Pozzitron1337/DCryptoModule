@@ -1,6 +1,6 @@
-const CryptoModulesContract = artifacts.require("CryptoModule");
 const RSAContract = artifacts.require("RSA");
+const AESContract = artifacts.require("AES");
 module.exports = function (deployer) {
-  //deployer.deploy(CryptoModulesContract);
   deployer.deploy(RSAContract);
+  deployer.deploy(AESContract)
 };
