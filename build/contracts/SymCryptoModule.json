@@ -1,0 +1,701 @@
+{
+  "contractName": "SymCryptoModule",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "cipher",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.5+commit.eb77ed08\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"cipher\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/ippolit/DApps/CryptoModule/contracts/CryptoModule.sol\":\"SymCryptoModule\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/ippolit/DApps/CryptoModule/contracts/CryptoModule.sol\":{\"keccak256\":\"0xee1623058f841d8c80d76296ddc2eedd549c5688a3c0af24d1db6449a73331d1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://52daa1579485cb606e4c5c2e22439272939c3fecb1be7b44688ea26ab2b05092\",\"dweb:/ipfs/QmSd8iusEAKUakEXC7N82gSV7wypf46QgaGEJ4uCmRjudJ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.7.0;\n\ninterface CryptoModule{\n    \n}\n\nabstract contract AsymCryptoModule is CryptoModule{\n  \n    function generateKey() virtual public;\n\n    function encrypt(address,string memory) virtual public;\n\n    function decrypt() virtual public;\n\n    function sign() virtual public;\n\n    function verify() virtual public;\n    \n}\n\nabstract contract SymCryptoModule is CryptoModule{\n    function cipher() virtual public;\n}",
+  "sourcePath": "/home/ippolit/DApps/CryptoModule/contracts/CryptoModule.sol",
+  "ast": {
+    "absolutePath": "/home/ippolit/DApps/CryptoModule/contracts/CryptoModule.sol",
+    "exportedSymbols": {
+      "AsymCryptoModule": [
+        24
+      ],
+      "CryptoModule": [
+        2
+      ],
+      "SymCryptoModule": [
+        30
+      ]
+    },
+    "id": 31,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 2,
+        "linearizedBaseContracts": [
+          2
+        ],
+        "name": "CryptoModule",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 31,
+        "src": "58:30:0"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 3,
+              "name": "CryptoModule",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2,
+              "src": "128:12:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CryptoModule_$2",
+                "typeString": "contract CryptoModule"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "128:12:0"
+          }
+        ],
+        "contractDependencies": [
+          2
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 24,
+        "linearizedBaseContracts": [
+          24,
+          2
+        ],
+        "name": "AsymCryptoModule",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "922dd7d9",
+            "id": 7,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generateKey",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "169:2:0"
+            },
+            "returnParameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "186:0:0"
+            },
+            "scope": 24,
+            "src": "149:38:0",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "functionSelector": "dc47fca7",
+            "id": 14,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "encrypt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14,
+                  "src": "210:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "210:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14,
+                  "src": "218:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 10,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "218:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "209:23:0"
+            },
+            "returnParameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "247:0:0"
+            },
+            "scope": 24,
+            "src": "193:55:0",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "functionSelector": "3983d430",
+            "id": 17,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decrypt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "270:2:0"
+            },
+            "returnParameters": {
+              "id": 16,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "287:0:0"
+            },
+            "scope": 24,
+            "src": "254:34:0",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "functionSelector": "2ca15122",
+            "id": 20,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sign",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "307:2:0"
+            },
+            "returnParameters": {
+              "id": 19,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "324:0:0"
+            },
+            "scope": 24,
+            "src": "294:31:0",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "functionSelector": "fc735e99",
+            "id": 23,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verify",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 21,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "346:2:0"
+            },
+            "returnParameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "363:0:0"
+            },
+            "scope": 24,
+            "src": "331:33:0",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 31,
+        "src": "90:281:0"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 25,
+              "name": "CryptoModule",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2,
+              "src": "410:12:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CryptoModule_$2",
+                "typeString": "contract CryptoModule"
+              }
+            },
+            "id": 26,
+            "nodeType": "InheritanceSpecifier",
+            "src": "410:12:0"
+          }
+        ],
+        "contractDependencies": [
+          2
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 30,
+        "linearizedBaseContracts": [
+          30,
+          2
+        ],
+        "name": "SymCryptoModule",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "0d8da216",
+            "id": 29,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cipher",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 27,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "443:2:0"
+            },
+            "returnParameters": {
+              "id": 28,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "460:0:0"
+            },
+            "scope": 30,
+            "src": "428:33:0",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 31,
+        "src": "373:90:0"
+      }
+    ],
+    "src": "32:431:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/ippolit/DApps/CryptoModule/contracts/CryptoModule.sol",
+    "exportedSymbols": {
+      "AsymCryptoModule": [
+        24
+      ],
+      "CryptoModule": [
+        2
+      ],
+      "SymCryptoModule": [
+        30
+      ]
+    },
+    "id": 31,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 2,
+        "linearizedBaseContracts": [
+          2
+        ],
+        "name": "CryptoModule",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 31,
+        "src": "58:30:0"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 3,
+              "name": "CryptoModule",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2,
+              "src": "128:12:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CryptoModule_$2",
+                "typeString": "contract CryptoModule"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "128:12:0"
+          }
+        ],
+        "contractDependencies": [
+          2
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 24,
+        "linearizedBaseContracts": [
+          24,
+          2
+        ],
+        "name": "AsymCryptoModule",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "922dd7d9",
+            "id": 7,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "generateKey",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "169:2:0"
+            },
+            "returnParameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "186:0:0"
+            },
+            "scope": 24,
+            "src": "149:38:0",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "functionSelector": "dc47fca7",
+            "id": 14,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "encrypt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14,
+                  "src": "210:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "210:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14,
+                  "src": "218:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 10,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "218:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "209:23:0"
+            },
+            "returnParameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "247:0:0"
+            },
+            "scope": 24,
+            "src": "193:55:0",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "functionSelector": "3983d430",
+            "id": 17,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decrypt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "270:2:0"
+            },
+            "returnParameters": {
+              "id": 16,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "287:0:0"
+            },
+            "scope": 24,
+            "src": "254:34:0",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "functionSelector": "2ca15122",
+            "id": 20,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sign",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 18,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "307:2:0"
+            },
+            "returnParameters": {
+              "id": 19,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "324:0:0"
+            },
+            "scope": 24,
+            "src": "294:31:0",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          },
+          {
+            "functionSelector": "fc735e99",
+            "id": 23,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verify",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 21,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "346:2:0"
+            },
+            "returnParameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "363:0:0"
+            },
+            "scope": 24,
+            "src": "331:33:0",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 31,
+        "src": "90:281:0"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 25,
+              "name": "CryptoModule",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2,
+              "src": "410:12:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CryptoModule_$2",
+                "typeString": "contract CryptoModule"
+              }
+            },
+            "id": 26,
+            "nodeType": "InheritanceSpecifier",
+            "src": "410:12:0"
+          }
+        ],
+        "contractDependencies": [
+          2
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 30,
+        "linearizedBaseContracts": [
+          30,
+          2
+        ],
+        "name": "SymCryptoModule",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "0d8da216",
+            "id": 29,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cipher",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 27,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "443:2:0"
+            },
+            "returnParameters": {
+              "id": 28,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "460:0:0"
+            },
+            "scope": 30,
+            "src": "428:33:0",
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 31,
+        "src": "373:90:0"
+      }
+    ],
+    "src": "32:431:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.5+commit.eb77ed08.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-12-06T00:27:24.792Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
