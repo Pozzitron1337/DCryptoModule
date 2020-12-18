@@ -1,5 +1,5 @@
-const Migrations = artifacts.require("Migrations");
+const CryptoModuleContract = artifacts.require("CryptoModule");
 
 module.exports = function (deployer) {
-  deployer.deploy(Migrations);
+  deployer.deploy(CryptoModuleContract,228);
 };
